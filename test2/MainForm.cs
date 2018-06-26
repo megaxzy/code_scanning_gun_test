@@ -87,10 +87,17 @@ namespace test2
 
         private void TextBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 'a')
+            if (e.KeyChar>'9'|| e.KeyChar < '0')
             {
                 MessageBox.Show("Wrong Input");
+                 
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TextBox2.Text = TextBox1.Text;
         }
     }
 }
