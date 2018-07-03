@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
+
 
 namespace test2
 {
@@ -38,7 +39,7 @@ namespace test2
             long target = 0;                           //这里如果用int会不够长
             if (long.TryParse(text_temp, out target) == true) //是不是整形
             {
-                if (ts.Milliseconds > 25 && time_first == false)  //判断时间间隔，如果时间间隔大于???毫秒，则将TextBox清空
+                if (ts.Milliseconds > 1025 && time_first == false)  //判断时间间隔，如果时间间隔大于???毫秒，则将TextBox清空
                 {
                     TextBox1.Text = "";
                 }
@@ -98,6 +99,21 @@ namespace test2
         private void button1_Click(object sender, EventArgs e)
         {
             TextBox2.Text = TextBox1.Text;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+
+            form1.Show();
+            this.Hide();
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
         }
     }
 }
